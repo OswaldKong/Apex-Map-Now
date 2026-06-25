@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Legends 地图轮换</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Apex Legends 地图轮换</h1>
+    <p class="subtitle" id="last-updated">加载中…</p>
+  </header>
+
+  <main>
+    <section class="module" id="module-battle-royale">
+      <h2 class="module-title">匹配</h2>
+      <div class="map-grid">
+        <div class="map-card">
+          <span class="map-label">当前地图</span>
+          <div class="map-bg" id="br-current-bg"></div>
+          <div class="map-overlay">
+            <h3 class="map-name" id="br-current-name">—</h3>
+            <p class="map-timer" id="br-current-timer">—</p>
+          </div>
+        </div>
+        <div class="map-card">
+          <span class="map-label">下张地图</span>
+          <div class="map-bg" id="br-next-bg"></div>
+          <div class="map-overlay">
+            <h3 class="map-name" id="br-next-name">—</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="module" id="module-ranked">
+      <h2 class="module-title">排位</h2>
+      <div class="map-grid">
+        <div class="map-card">
+          <span class="map-label">当前地图</span>
+          <div class="map-bg" id="ranked-current-bg"></div>
+          <div class="map-overlay">
+            <h3 class="map-name" id="ranked-current-name">—</h3>
+            <p class="map-timer" id="ranked-current-timer">—</p>
+          </div>
+        </div>
+        <div class="map-card">
+          <span class="map-label">下张地图</span>
+          <div class="map-bg" id="ranked-next-bg"></div>
+          <div class="map-overlay">
+            <h3 class="map-name" id="ranked-next-name">—</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="error-banner hidden" id="error-banner"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
