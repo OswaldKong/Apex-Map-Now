@@ -4,60 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Apex Legends 地图轮换</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
+  <header class="site-header">
     <h1>Apex Legends 地图轮换</h1>
-    <p class="subtitle" id="last-updated">加载中…</p>
+    <p class="subtitle">实时追踪匹配、排位、团队竞技与外卡模式</p>
+    <div class="status-bar">
+      <span id="last-updated">加载中…</span>
+      <span id="refresh-indicator" class="refresh-indicator" hidden>刷新中</span>
+    </div>
   </header>
 
-  <main>
-    <section class="module" id="module-battle-royale">
-      <h2 class="module-title">匹配</h2>
-      <div class="map-grid">
-        <div class="map-card">
-          <span class="map-label">当前地图</span>
-          <div class="map-bg" id="br-current-bg"></div>
-          <div class="map-overlay">
-            <h3 class="map-name" id="br-current-name">—</h3>
-            <p class="map-timer" id="br-current-timer">—</p>
-          </div>
-        </div>
-        <div class="map-card">
-          <span class="map-label">下张地图</span>
-          <div class="map-bg" id="br-next-bg"></div>
-          <div class="map-overlay">
-            <h3 class="map-name" id="br-next-name">—</h3>
-          </div>
-        </div>
-      </div>
-    </section>
+  <main id="app" class="app"></main>
 
-    <section class="module" id="module-ranked">
-      <h2 class="module-title">排位</h2>
-      <div class="map-grid">
-        <div class="map-card">
-          <span class="map-label">当前地图</span>
-          <div class="map-bg" id="ranked-current-bg"></div>
-          <div class="map-overlay">
-            <h3 class="map-name" id="ranked-current-name">—</h3>
-            <p class="map-timer" id="ranked-current-timer">—</p>
-          </div>
-        </div>
-        <div class="map-card">
-          <span class="map-label">下张地图</span>
-          <div class="map-bg" id="ranked-next-bg"></div>
-          <div class="map-overlay">
-            <h3 class="map-name" id="ranked-next-name">—</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+  <footer class="site-footer">
+    <p>数据来源 Apex Legends Status · 每 30 秒自动更新 作者Oswaldkk Powered By Cursor, ChatGPT, Vercel, GitHub.</p>
+  </footer>
 
-  <div class="error-banner hidden" id="error-banner"></div>
-
+  <script src="config.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
